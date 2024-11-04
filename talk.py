@@ -37,7 +37,7 @@ def chatgpt(api_key, conversation, chatbot, user_input, temperature=0.9, frequen
     
     try:
         completion = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo-0613",
+            model="gpt-4o-mini",
             temperature=temperature,
             frequency_penalty=frequency_penalty,
             presence_penalty=presence_penalty,
@@ -82,7 +82,7 @@ def print_colored(agent, text):
     color = agent_colors.get(agent, "")
     print(color + f"{agent}: {text}" + Style.RESET_ALL, end="")
 
-voice_id1 = 'Your Voice ID'
+voice_id1 = os.getenv('VOICE_ID1')
 
 def record_and_transcribe(duration=8, fs=44100):
     print('Recording...')
