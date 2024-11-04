@@ -1,0 +1,8 @@
+sounddevice
+soundfile
+numpy
+openai==0.28.0  # or omit the version if you want the latest version
+requests
+colorama
+pydub  # Correct package name
+python-dotenv  # Added for .env file support
